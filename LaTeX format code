@@ -6,6 +6,8 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{amsmath}
+\usepackage{tocloft}
+\usepackage{array}
 \setlist{nosep,leftmargin=0.2in}
 
 % ========== ULTRA-COMPACT SETTINGS ==========
@@ -43,11 +45,129 @@
 
 \begin{document}
 
-% ========== TITLE ==========
+% ========== PAGE 1: TITLE + FIRST HALF OF TOC ==========
 \begin{center}
-\large\textbf{JU\_Jabian\_6.1 Code Template}\\
-
+\Large\textbf{JU\_Jabian\_6.1 Code Template}\\
 \end{center}
+\vspace{0.2cm}
+
+\begin{center}
+    \LARGE \textbf{Table of Contents}
+\end{center}
+\vspace{0.1cm}
+
+\begin{normalsize}
+\begin{center}
+\begin{tabular}{p{0.65\textwidth} r}
+\multicolumn{2}{l}{\textbf{1. Data Structures}} \\
+\ \ \ Template with PBDS & 3 \\
+\ \ \ 2D BIT & 3 \\
+\ \ \ BIT & 3 \\
+\ \ \ Sparse Table & 3 \\
+\ \ \ Segment Tree & 4 \\
+\ \ \ Persistent Segment Tree & 4 \\
+\ \ \ Merge Sort Tree & 5 \\
+\ \ \ Trie & 5 \\
+\\
+\multicolumn{2}{l}{\textbf{2. Graph Algorithms}} \\
+\ \ \ DSU & 6 \\
+\ \ \ Dijkstra & 6 \\
+\ \ \ Bellman Ford & 7 \\
+\ \ \ Floyd Warshall & 7 \\
+\ \ \ Articulation Point & 7 \\
+\ \ \ Bridge & 7 \\
+\ \ \ SCC & 8 \\
+\ \ \ BCC & 8 \\
+\ \ \ Topological Sort & 9 \\
+\ \ \ Cycle Detection & 9 \\
+\ \ \ LCA & 9 \\
+\ \ \ Bipartite Matching & 10 \\
+\ \ \ Max Flow (Dinic) & 10 \\
+\\
+\multicolumn{2}{l}{\textbf{3. Mathematics}} \\
+\ \ \ Sieve & 11 \\
+\ \ \ Euler Totient & 11 \\
+\ \ \ Extended Euclid & 11 \\
+\ \ \ Mobius & 12 \\
+\ \ \ Inclusion-Exclusion & 12 \\
+\ \ \ Derangements \& find n & 12 \\
+\ \ \ Baby-step Giant-step & 12 \\
+\ \ \ BigMod/nCr & 12 \\
+\ \ \ Chinese Remainder Theorem & 13 \\
+\\
+\multicolumn{2}{l}{\textbf{4. Dynamic Programming}} \\
+\ \ \ SOS DP & 13 \\
+\ \ \ Digit DP & 13 \\
+\ \ \ Bit Mask DP & 13 \\
+\ \ \ DP Path Print & 14 \\
+\\
+\multicolumn{2}{l}{\textbf{5. String Algorithms}} \\
+\ \ \ Hashing & 14 \\
+\ \ \ KMP & 14 \\
+\ \ \ Z Algorithm & 14 \\
+\ \ \ Manacher & 14 \\
+\ \ \ Suffix Array & 15 \\
+\end{tabular}
+\end{center}
+\end{normalsize}
+
+% ========== PAGE 2: SECOND HALF OF TOC ==========
+\newpage
+\fancyhead[L]{\scriptsize JU\_Jabian\_6.1 }
+
+\begin{normalsize}
+\begin{center}
+\begin{tabular}{p{0.65\textwidth} r}
+
+\multicolumn{2}{l}{\textbf{6. Geometry}} \\
+\ \ \ Basic Geometry & 15 \\
+\ \ \ Convex Hull & 16 \\
+\ \ \ Circle Intersection & 16 \\
+\ \ \ Point in Polygon & 16 \\
+\ \ \ Segment Intersection & 17 \\
+\ \ \ Polygon Area & 17 \\
+\ \ \ Distance from Point to line Segment & 17 \\
+\ \ \ Circle from 3 Points & 17 \\
+\\
+\multicolumn{2}{l}{\textbf{7. Advanced Algorithms}} \\
+\ \ \ Heavy-Light Decomposition & 17 \\
+\ \ \ Mo's Algorithm & 18 \\
+\ \ \ Square Root Decomposition & 18 \\
+\ \ \ Euler Tour & 18 \\
+\ \ \ Tree Diameter & 18 \\
+\\
+\multicolumn{2}{l}{\textbf{8. 2D Algorithms}} \\
+\ \ \ 2D Pre Sum + mat Rotation + grid 8 direction move & 19 \\
+\ \ \ Spiral Matrix & 19 \\
+\ \ \ Matrix Exponentiation & 19 \\
+\\
+\multicolumn{2}{l}{\textbf{9. Utilities}} \\
+\ \ \ Path Compression & 19 \\
+\ \ \ Histogram & 19 \\
+\ \ \ Is Intersect All Points & 19 \\
+\ \ \ Unique Line Equations & 20 \\
+\\
+\multicolumn{2}{l}{\textbf{10. Special Problems}} \\
+\ \ \ Kth Number L to R Using Persistent Seg Tree & 20 \\
+\ \ \ How Many Subarrays XOR $< k$ & 21 \\
+\ \ \ Min Length with Max XOR $\ge k$ & 21 \\
+\ \ \ $I < J < K \ \ and\ \ a_i > a_j > a_k$ & 21 \\
+\ \ \ Tetrahedron Formulas & 21 \\
+\\
+\multicolumn{2}{l}{\textbf{11. Templates}} \\
+\ \ \ Saad Segment Tree & 21 \\
+\ \ \ Kaium Segment Tree & 23 \\
+\ \ \ Kaium I/O & 23 \\
+\ \ \ Kaium Hashing & 24 \\
+\ \ \ Min Cut & 24 \\
+\ \ \ Convex Hull (kaium) & 25 \\
+\end{tabular}
+\end{center}
+\end{normalsize}
+
+% ========== PAGE 3: DATA STRUCTURES SECTION + CODE STARTS ==========
+\newpage
+\fancyhead[L]{\scriptsize JU\_Jabian\_6.1}
 
 % ========== 1. DATA STRUCTURES ==========
 \section*{Data Structures}
@@ -1893,28 +2013,110 @@ int countLines(vector<pair<int,int>>& p) {
 \section*{Special Problems}
 \subsection*{Kth Number L to R Using Persistent Seg Tree}
 \begin{lstlisting}
-//build same just leaf node-> val = 0; update same just leafnode = me->val + val;
-int query(node* n1,node* n2,int l,int r,int k){
-    if(l == r){ return l;}
+//number of elements greater than k in the subsequence ai, ai+1 ... aj
+struct node{
+    int val;
+    node* lc;
+    node* rc;
+};
+int ar[N];
+node* versions[N+5];
+vector<node*> lagbe;
+ 
+node* build(int l,int r){
+    if(l == r){
+        node* me = new node();
+        lagbe.pb(me);
+        me->val = 0;
+        me->lc = NULL;
+        me->rc = NULL;
+        return me;
+    }
+    node* my = new node();
+    lagbe.pb(my);
     int mid = (l + r)/2;
-    int left = n1->lc->val - n2->lc->val; 
-    if(k <= left){
-        return query(n1->lc,n2->lc,l,mid,k);
+    my->lc = build(l,mid);
+    my->rc = build(mid+1,r);
+    my->val = (my->lc->val + my->rc->val);
+    return my;
+}
+int query(node* n1,node* n2,int l,int r,int L,int R){
+    if(n1 == NULL || n2 == NULL)return 0;
+    if(R < l || r < L)return 0;
+    if(L <= l && r <= R){
+        return n1->val - n2->val;
+    }
+    int mid = (l + r)/2;
+    int p = query(n1->lc,n2->lc,l,mid,L,R);
+    int q = query(n1->rc,n2->rc,mid+1,r,L,R);
+    return p + q;
+}
+node* update(node* my,int l,int r,int ind,int val){
+    if(l == r){
+        node* new_my = new node();
+        lagbe.pb(new_my);
+        new_my->lc = NULL;
+        new_my->rc = NULL;
+        new_my->val = my -> val + val;
+        return new_my;
+    }
+    node* new_me = new node();
+    lagbe.pb(new_me);
+    int mid = (l + r)/2;
+    if(ind <= mid){
+        node* x = update(my->lc,l,mid,ind,val);
+        new_me->lc = x;
+        new_me->rc = my->rc;
     }
     else{
-        return query(n1->rc,n2->rc,mid+1,r,k-left);
+        node* y = update(my->rc,mid+1,r,ind,val);
+        new_me->lc = my->lc;
+        new_me->rc = y;
     }
-} /// main function
-sort(all(com)); com.resize(unique(all(com))-com.begin());
-map<int,int> pos; int x = 0; int si = sz(com);
-for(auto u : com)pos[u] = x++;  versions[0] = build(0,si);
-for(int i = 1; i <= n; i++){
-    versions[i] = update(versions[i-1],0,si,pos[ar[i]],1);
+    new_me->val = new_me->lc->val + new_me->rc->val;
+    return new_me;
 }
-while(q--){
-    int l,r,k; cin >> l >> r >> k;
-    int x = query(versions[r],versions[l-1],0,si,k);
-    cout << com[x] << endl; 
+vi com;
+void Goriber_solve()
+{
+    int n,q;
+    cin >> n;
+    for(int i = 1; i <= n; i++){
+        cin >> ar[i];
+        com.pb(ar[i]);
+    }
+    sort(all(com));
+    com.resize(unique(all(com))-com.begin());
+    map<int,int> pos;
+    int x = 0;
+    for(auto u : com)pos[u] = x++;
+    int si = sz(com)+1;
+    versions[0] = build(0,si);
+    for(int i = 1; i <= n; i++){
+        versions[i] = update(versions[i-1],0,si,pos[ar[i]],1);
+    }
+    int ans = 0;
+    cin >> q;
+    while(q--){
+        int a,b,c;
+        cin >> a >> b >> c;
+        a = (a ^ ans);
+        b = (b ^ ans);
+        c = (c ^ ans);
+        int val = upper_bound(all(com),c)-com.begin();
+        if(a <= 0)a = 1;
+        if(b > n)b = n;
+        if(a > b){
+            cout << 0 << endl;
+            ans = 0;
+            continue;
+        }
+        ans = query(versions[b],versions[a-1],0,si,val,si);
+        cout << ans << endl;
+    }
+    for(auto u : lagbe){
+        delete u;
+    }
 }
 \end{lstlisting}
 
@@ -1963,7 +2165,7 @@ for(int i = 1; i <= n; i++) { int x; cin >> x; trie.insert(x,i); int lo = 1, hi 
 } if(ans == n + 1)cout << -1 << endl; else cout << ans << endl;
 \end{lstlisting}
 
-\subsection*{$I < J < K \ \ &&\ \ a_i > a_j > a_k$}
+\subsection*{$I < J < K \ \ and\ \ a_i > a_j > a_k$}
 \begin{lstlisting}
 vi a(n), b(n); for(int i = 0; i < n; i++) { cin >> a[i]; b[i] = a[i]; }
 sort(all(b)); b.erase(unique(all(b)), b.end());
