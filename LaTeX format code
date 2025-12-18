@@ -46,10 +46,12 @@
 \begin{document}
 
 % ========== PAGE 1: TITLE + FIRST HALF OF TOC ==========
-\begin{center}
-\Large\textbf{JU\_Jabian\_6.1 Code Template}\\
-\end{center}
-\vspace{0.2cm}
+\begin{document}
+\title{Team Notebook}
+\author{JU\_Jabian\_6.1 \\ Jahid $\mid$ Saad $\mid$ Kaium}
+\date{} % This removes the date
+
+\maketitle
 
 \begin{center}
     \LARGE \textbf{Table of Contents}
@@ -60,11 +62,10 @@
 \begin{center}
 \begin{tabular}{p{0.65\textwidth} r}
 \multicolumn{2}{l}{\textbf{1. Data Structures}} \\
-\ \ \ Template with PBDS & 3 \\
 \ \ \ 2D BIT & 3 \\
 \ \ \ BIT & 3 \\
 \ \ \ Sparse Table & 3 \\
-\ \ \ Segment Tree & 4 \\
+\ \ \ Segment Tree & 3 \\
 \ \ \ Persistent Segment Tree & 4 \\
 \ \ \ Merge Sort Tree & 5 \\
 \ \ \ Trie & 5 \\
@@ -72,41 +73,41 @@
 \multicolumn{2}{l}{\textbf{2. Graph Algorithms}} \\
 \ \ \ DSU & 6 \\
 \ \ \ Dijkstra & 6 \\
-\ \ \ Bellman Ford & 7 \\
+\ \ \ Bellman Ford & 6 \\
 \ \ \ Floyd Warshall & 7 \\
 \ \ \ Articulation Point & 7 \\
 \ \ \ Bridge & 7 \\
-\ \ \ SCC & 8 \\
+\ \ \ SCC & 7 \\
 \ \ \ BCC & 8 \\
-\ \ \ Topological Sort & 9 \\
+\ \ \ Topological Sort & 8 \\
 \ \ \ Cycle Detection & 9 \\
 \ \ \ LCA & 9 \\
-\ \ \ Bipartite Matching & 10 \\
+\ \ \ Bipartite Matching & 9 \\
 \ \ \ Max Flow (Dinic) & 10 \\
 \\
 \multicolumn{2}{l}{\textbf{3. Mathematics}} \\
-\ \ \ Sieve & 11 \\
+\ \ \ Sieve & 10 \\
 \ \ \ Euler Totient & 11 \\
 \ \ \ Extended Euclid & 11 \\
-\ \ \ Mobius & 12 \\
+\ \ \ Mobius & 11 \\
 \ \ \ Inclusion-Exclusion & 12 \\
 \ \ \ Derangements \& find n & 12 \\
 \ \ \ Baby-step Giant-step & 12 \\
 \ \ \ BigMod/nCr & 12 \\
-\ \ \ Chinese Remainder Theorem & 13 \\
+\ \ \ Chinese Remainder Theorem & 12 \\
 \\
 \multicolumn{2}{l}{\textbf{4. Dynamic Programming}} \\
-\ \ \ SOS DP & 13 \\
+\ \ \ SOS DP & 12 \\
 \ \ \ Digit DP & 13 \\
 \ \ \ Bit Mask DP & 13 \\
-\ \ \ DP Path Print & 14 \\
+\ \ \ DP Path Print & 13 \\
 \\
 \multicolumn{2}{l}{\textbf{5. String Algorithms}} \\
-\ \ \ Hashing & 14 \\
+\ \ \ Hashing & 13 \\
 \ \ \ KMP & 14 \\
 \ \ \ Z Algorithm & 14 \\
 \ \ \ Manacher & 14 \\
-\ \ \ Suffix Array & 15 \\
+\ \ \ Suffix Array & 14 \\
 \end{tabular}
 \end{center}
 \end{normalsize}
@@ -121,10 +122,10 @@
 
 \multicolumn{2}{l}{\textbf{6. Geometry}} \\
 \ \ \ Basic Geometry & 15 \\
-\ \ \ Convex Hull & 16 \\
+\ \ \ Convex Hull & 15 \\
 \ \ \ Circle Intersection & 16 \\
 \ \ \ Point in Polygon & 16 \\
-\ \ \ Segment Intersection & 17 \\
+\ \ \ Segment Intersection & 16 \\
 \ \ \ Polygon Area & 17 \\
 \ \ \ Distance from Point to line Segment & 17 \\
 \ \ \ Circle from 3 Points & 17 \\
@@ -137,25 +138,27 @@
 \ \ \ Tree Diameter & 18 \\
 \\
 \multicolumn{2}{l}{\textbf{8. 2D Algorithms}} \\
-\ \ \ 2D Pre Sum + mat Rotation + grid 8 direction move & 19 \\
-\ \ \ Spiral Matrix & 19 \\
-\ \ \ Matrix Exponentiation & 19 \\
+\ \ \ 2D Pre Sum + mat Rotation + grid 8 direction move & 18 \\
+\ \ \ Spiral Matrix & 18 \\
+\ \ \ Matrix Exponentiation & 18 \\
 \\
 \multicolumn{2}{l}{\textbf{9. Utilities}} \\
 \ \ \ Path Compression & 19 \\
 \ \ \ Histogram & 19 \\
 \ \ \ Is Intersect All Points & 19 \\
-\ \ \ Unique Line Equations & 20 \\
+\ \ \ Unique Line Equations & 19 \\
 \\
 \multicolumn{2}{l}{\textbf{10. Special Problems}} \\
-\ \ \ Kth Number L to R Using Persistent Seg Tree & 20 \\
-\ \ \ How Many Subarrays XOR $< k$ & 21 \\
+\ \ \ Kth Number L to R Using Persistent Seg Tree & 19 \\
+\ \ \ How Many Subarrays XOR $< k$ & 20 \\
 \ \ \ Min Length with Max XOR $\ge k$ & 21 \\
 \ \ \ $I < J < K \ \ and\ \ a_i > a_j > a_k$ & 21 \\
 \ \ \ Tetrahedron Formulas & 21 \\
 \\
 \multicolumn{2}{l}{\textbf{11. Templates}} \\
-\ \ \ Saad Segment Tree & 21 \\
+\ \ \ Template with PBDS & 21 \\
+\ \ \ GP Hash Table  & 21  \\
+\ \ \ Saad Segment Tree & 22 \\
 \ \ \ Kaium Segment Tree & 23 \\
 \ \ \ Kaium I/O & 23 \\
 \ \ \ Kaium Hashing & 24 \\
@@ -170,38 +173,8 @@
 \fancyhead[L]{\scriptsize JU\_Jabian\_6.1}
 
 % ========== 1. DATA STRUCTURES ==========
-\section*{Data Structures}
-\subsection*{Template with PBDS}
-\begin{lstlisting}
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;template <class T>
-using ordered_set = tree<T,null_type,less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-#define endl '\n'  #define F first  #define S second   
-#define all(s) (s).begin(), (s).end() 
-#define rall(s) s.rbegin(), s.rend() 
-#define sz(x) (int)x.size()
-#define mem(a, b) memset(a, b, sizeof(a))
-#define cnt_bit(x) __builtin_popcountll(x)
-#define getbit(n, i) (((n) & (1LL << (i))) != 0)
-#define msb(x) 31 - __builtin_clz(x)
-typedef array<int,3> tu;
-mt19937_64 gen(random_device{}());int r_num = uniform_int_distribution<long long>{0, 1e18}(gen);
-view->layout 3 column then group max 2 column
-Sublime text setup ->tool->build system->newbuild
-{
-    "shell_cmd": "g++ \"${file}\" -o a.exe && a.exe < input.in > output.in"
-}
-{// run with …..
-"cmd": ["g++.exe","-std=c++14", "${file}", "-o", "${file_base_name}.exe", "&&" , "${file_base_name}.exe<input.in>output.in"],
-"selector":"source.cpp",
-"shell":true,
-"working_dir":"$file_path",
-"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
-}
-\end{lstlisting}
 
+\section*{Data Structures}
 \subsection*{2D BIT}
 \begin{lstlisting}
 template <typename T> class BIT2D {
@@ -2197,7 +2170,59 @@ double insphere(double WX, double WY, double WZ, double XY, double XZ, double YZ
 \end{lstlisting}
 
 % ========== 11. TEMPLATES ==========
+
 \section*{Templates}
+\subsection*{Template with PBDS}
+\begin{lstlisting}
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;template <class T>
+using ordered_set = tree<T,null_type,less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl '\n'  #define F first  #define S second   
+#define all(s) (s).begin(), (s).end() 
+#define rall(s) s.rbegin(), s.rend() 
+#define sz(x) (int)x.size()
+#define mem(a, b) memset(a, b, sizeof(a))
+#define cnt_bit(x) __builtin_popcountll(x)
+#define getbit(n, i) (((n) & (1LL << (i))) != 0)
+#define msb(x) 31 - __builtin_clz(x)
+typedef array<int,3> tu;
+mt19937_64 gen(random_device{}());int r_num = uniform_int_distribution<long long>{0, 1e18}(gen);
+view->layout 3 column then group max 2 column
+Sublime text setup ->tool->build system->newbuild
+{
+    "shell_cmd": "g++ \"${file}\" -o a.exe && a.exe < input.in > output.in"
+}
+{
+    "cmd": [
+        "g++ -std=c++20 \"$file_name\" -o \"$file_base_name\" && timeout 4s ./\"$file_base_name\" < input.txt > output.txt"
+    ],
+    "selector": "source.c++",
+    "shell": true,
+    "working_dir": "$file_path"
+}
+\end{lstlisting}
+
+\subsection*{GP Hash Table}
+\begin{lstlisting}
+struct custom_hash {
+	static uint64_t splitmix64(uint64_t x) {
+		x += 0x9e3779b97f4a7c15;
+		x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
+		x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
+		return x ^ (x >> 31);
+	}
+	size_t operator()(uint64_t x) const {
+		static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
+		return splitmix64(x + FIXED_RANDOM);
+	}
+	size_t operator()(const pair<int, int>&x)const{
+		return ((long long)x.first) ^ (((long long)x.second) << 32);
+	}
+}; unordered_map<pair<ll, ll>, vector<ll>, custom_hash> bd;
+unordered_map<pair<ll, ll>, ll, custom_hash> dp;
+\end{lstlisting}
 \subsection*{Saad Segment Tree}
 \begin{lstlisting}
 struct ST {
@@ -2355,7 +2380,6 @@ struct SegTree {
     ROF (i, 1, n-1)
       Tree[i] = Tree[2*i] + Tree[2*i+1];
   }
-  
   // Update value at position p
   void update(int p, int value) {
     p += n;
@@ -2363,7 +2387,6 @@ struct SegTree {
     for (p /= 2; p > 0; p /= 2)
       Tree[p] = Tree[2*p] + Tree[2*p+1];
   }
-  
   // Query on interval [l, r)
   Node query(int l, int r) {
     Node resL, resR;
@@ -2553,12 +2576,9 @@ auto max_flow = [&](int s, int t) {
 
 		delta >>= 1;
 	}
-
 	return flow;
 };
-
 c_out(max_flow(1, n));
-
 VII Cuts;
 VC Vis(n+1);
 
@@ -2568,7 +2588,6 @@ auto dfs_cuts = [&](int u, auto& self) -> void {
 		if (!Vis[v] && M[u][v])
 			self(v, self);
 };
-
 dfs_cuts(1, dfs_cuts);
 
 \end{lstlisting}
@@ -2577,13 +2596,11 @@ dfs_cuts(1, dfs_cuts);
 \begin{lstlisting}
 II operator-(II p1, II p2) \
 { return { p1[0] - p2[0], p1[1] - p2[1] }; }
-
 int orientation(II p1, II p2, II p) {
   II v1 = p2 - p1, v2 = p - p1;
   int cross = v1[0] * v2[1] - v1[1] * v2[0];
   return (cross > 0) - (cross < 0);
 }
-
 deque<II> convex_hull(vector<II>& V, \
 bool collinear = false) {
   II lp = V[0]; // find the lowest point
@@ -2599,9 +2616,7 @@ bool collinear = false) {
     double dist2 = v[0] * v[0] + v[1] * v[1];
     D.push_back({ angle, dist2, (double)i });
   }
-  
   sort(all(D));
-  
   // reverse collinear points at the back
   if (collinear) {
     double angle = D.back()[0];
@@ -2609,12 +2624,10 @@ bool collinear = false) {
     while (it < D.rend() && (*it)[0] == angle) it++;
     reverse(D.rbegin(), it);
   }
-  
   deque<II> H;
   int i; // add first two points
   i = D[0][2]; H.push_front(V[i]); D.pop_front();
   i = D[0][2]; H.push_front(V[i]); D.pop_front();
-  
   for (auto& d : D) {
     i = d[2];
     II p = V[i];
@@ -2622,8 +2635,7 @@ bool collinear = false) {
     while (orientation(H[1], H[0], p) < 0)
       H.pop_front();
     H.push_front(p);
-  }
-  
+  } 
   reverse(all(H));
   return H;
 }
