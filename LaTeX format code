@@ -1,32 +1,33 @@
 \documentclass[10pt]{article}
-\usepackage[a4paper,margin=0.5in]{geometry}
+\usepackage[a4paper,margin=0.5in,landscape]{geometry}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{amsmath}
-\usepackage{tocloft}
 \usepackage{array}
+\usepackage{multicol}
+\usepackage{paracol}
 \setlist{nosep,leftmargin=0.2in}
 
 % ========== ULTRA-COMPACT SETTINGS ==========
-\linespread{0.9}
+\linespread{0.9}  
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
+\setlength{\parskip}{2pt}  
 \titlespacing*{\section}{0pt}{3pt}{2pt}
 \titlespacing*{\subsection}{0pt}{2pt}{1pt}
 
 % ========== CODE STYLE ==========
 \lstset{
     language=C++,
-    basicstyle=\ttfamily\scriptsize,
+    basicstyle={\small\ttfamily},  
     keywordstyle=\color{blue},
     commentstyle=\color{gray},
     stringstyle=\color{red},
     numbers=left,
     numberstyle=\tiny\color{gray},
-    numbersep=4pt,
+    numbersep=5pt,  
     backgroundcolor=\color{white},
     showspaces=false,
     showstringspaces=false,
@@ -45,129 +46,133 @@
 
 \begin{document}
 
-% ========== PAGE 1: TITLE + FIRST HALF OF TOC ==========
-\begin{document}
-\title{Team Notebook}
-\author{JU\_Jabian\_6.1 \\ Jahid $\mid$ Saad $\mid$ Kaium}
-\date{} % This removes the date
+% ========== TITLE PAGE ==========
+\begin{center}
+    \LARGE \textbf{Team Notebook} \\
+    \large JU\_Jabian\_6.1 $\mid$ Jahangirnagar University\\ 
+    Jahid $\mid$ Saad $\mid$ Kaium
+\end{center}
 
-\maketitle
+\vspace{0.3cm}
 
+% ========== EXPANDED 3-COLUMN TOC ==========
 \begin{center}
     \LARGE \textbf{Table of Contents}
 \end{center}
-\vspace{0.1cm}
 
-\begin{normalsize}
-\begin{center}
-\begin{tabular}{p{0.65\textwidth} r}
-\multicolumn{2}{l}{\textbf{1. Data Structures}} \\
-\ \ \ 2D BIT & 3 \\
-\ \ \ BIT & 3 \\
-\ \ \ Sparse Table & 3 \\
-\ \ \ Segment Tree & 3 \\
-\ \ \ Persistent Segment Tree & 4 \\
-\ \ \ Merge Sort Tree & 5 \\
-\ \ \ Trie & 5 \\
-\\
-\multicolumn{2}{l}{\textbf{2. Graph Algorithms}} \\
-\ \ \ DSU & 6 \\
-\ \ \ Dijkstra & 6 \\
-\ \ \ Bellman Ford & 6 \\
-\ \ \ Floyd Warshall & 7 \\
-\ \ \ Articulation Point & 7 \\
-\ \ \ Bridge & 7 \\
-\ \ \ SCC & 7 \\
-\ \ \ BCC & 8 \\
-\ \ \ Topological Sort & 8 \\
-\ \ \ Cycle Detection & 9 \\
-\ \ \ LCA & 9 \\
-\ \ \ Bipartite Matching & 9 \\
-\ \ \ Max Flow (Dinic) & 10 \\
-\\
-\multicolumn{2}{l}{\textbf{3. Mathematics}} \\
-\ \ \ Sieve & 10 \\
-\ \ \ Euler Totient & 11 \\
-\ \ \ Extended Euclid & 11 \\
-\ \ \ Mobius & 11 \\
-\ \ \ Inclusion-Exclusion & 12 \\
-\ \ \ Derangements \& find n & 12 \\
-\ \ \ Baby-step Giant-step & 12 \\
-\ \ \ BigMod/nCr & 12 \\
-\ \ \ Chinese Remainder Theorem & 12 \\
-\\
-\multicolumn{2}{l}{\textbf{4. Dynamic Programming}} \\
-\ \ \ SOS DP & 12 \\
-\ \ \ Digit DP & 13 \\
-\ \ \ Bit Mask DP & 13 \\
-\ \ \ DP Path Print & 13 \\
-\\
-\multicolumn{2}{l}{\textbf{5. String Algorithms}} \\
-\ \ \ Hashing & 13 \\
-\ \ \ KMP & 14 \\
-\ \ \ Z Algorithm & 14 \\
-\ \ \ Manacher & 14 \\
-\ \ \ Suffix Array & 14 \\
-\end{tabular}
-\end{center}
-\end{normalsize}
+\fontsize{9}{10}\selectfont 
+\begin{multicols}{3}
+\setlength{\columnsep}{0.5cm} 
 
-% ========== PAGE 2: SECOND HALF OF TOC ==========
+% COLUMN 1
+\noindent
+\textbf{\large 1. Data Structures}\\[2pt]
+\hspace{0.3cm}2D BIT \dotfill 2\\
+\hspace{0.3cm}BIT (Fenwick Tree) \dotfill 2\\
+\hspace{0.3cm}Sparse Table \dotfill 2\\
+\hspace{0.3cm}Segment Tree \dotfill 2\\
+\hspace{0.3cm}Persistent Segment Tree \dotfill 3\\
+\hspace{0.3cm}Merge Sort Tree \dotfill 4\\
+\hspace{0.3cm}Trie \dotfill 4\\[4pt]
+
+\textbf{\large 2. Graph Algorithms}\\[2pt]
+\hspace{0.3cm}DSU (Disjoint Set Union) \dotfill 5\\
+\hspace{0.3cm}Dijkstra \dotfill 5\\
+\hspace{0.3cm}Bellman Ford \dotfill 5\\
+\hspace{0.3cm}Floyd Warshall \dotfill 6\\
+\hspace{0.3cm}Articulation Point \dotfill 6\\
+\hspace{0.3cm}Bridge \dotfill 6\\
+\hspace{0.3cm}SCC (Kosaraju) \dotfill 6\\
+\hspace{0.3cm}BCC (Biconnected) \dotfill 7\\
+\hspace{0.3cm}Topological Sort \dotfill 7\\
+\hspace{0.3cm}Cycle Detection \dotfill 8\\
+\hspace{0.3cm}LCA (Binary Lifting) \dotfill 8\\
+\hspace{0.3cm}Bipartite Matching \dotfill 8\\
+\hspace{0.3cm}Max Flow \dotfill 9\\
+
+\textbf{\large 3. Mathematics}\\[2pt]
+\hspace{0.3cm}Sieve (Prime + SPF) \dotfill 9\\
+\hspace{0.3cm}Euler Totient \dotfill 10\\
+\hspace{0.3cm}Extended Euclid \dotfill 10\\
+\hspace{0.3cm}Mobius Function \dotfill 10\\
+\hspace{0.3cm}Inclusion-Exclusion \dotfill 11\\
+\hspace{0.3cm}Derangements \dotfill 11\\
+\hspace{0.3cm}Baby-step Giant-step \dotfill 11\\
+\hspace{0.3cm}BigMod / nCr \dotfill 11\\
+\hspace{0.3cm}Chinese Remainder Theorem \dotfill 11\\
+\columnbreak
+
+% COLUMN 3
+\noindent
+\textbf{\large 4. Dynamic Programming}\\[2pt]
+\hspace{0.3cm}SOS DP (Sum over Subsets) \dotfill 11\\
+\hspace{0.3cm}Digit DP \dotfill 12\\
+\hspace{0.3cm}Bit Mask DP \dotfill 12\\
+\hspace{0.3cm}DP Path Print \dotfill 12\\[4pt]
+
+\textbf{\large 5. String Algorithms}\\[2pt]
+\hspace{0.3cm}Hashing (Rolling Hash) \dotfill 12\\
+\hspace{0.3cm}KMP \dotfill 13\\
+\hspace{0.3cm}Z Algorithm \dotfill 13\\
+\hspace{0.3cm}Manacher (Palindromes) \dotfill 13\\
+\hspace{0.3cm}Suffix Array \dotfill 13\\[4pt]
+
+\textbf{\large 6. Geometry}\\[2pt]
+\hspace{0.3cm}Basic Geometry \dotfill 14\\
+\hspace{0.3cm}Convex Hull (Graham Scan) \dotfill 14\\
+\hspace{0.3cm}Circle Intersection \dotfill 15\\
+\hspace{0.3cm}Point in Polygon \dotfill 15\\
+\hspace{0.3cm}Segment Intersection \dotfill 16\\
+\hspace{0.3cm}Polygon Area (Shoelace) \dotfill 16\\
+\hspace{0.3cm}Distance to Line Segment \dotfill 16\\
+\hspace{0.3cm}Circle from 3 Points \dotfill 16\\[4pt]
+
+\textbf{\large 7. Advanced Algorithms}\\[2pt]
+\hspace{0.3cm}Heavy-Light Decomposition \dotfill 17\\
+\hspace{0.3cm}Mo's Algorithm \dotfill 17\\
+\hspace{0.3cm}Square Root Decomposition \dotfill 17\\
+\hspace{0.3cm}Euler Tour \dotfill 18\\
+\hspace{0.3cm}Tree Diameter \dotfill 18\\[4pt]
+\columnbreak
+
+% COLUMN 3
+\noindent
+\textbf{\large 8. 2D Algorithms}\\[2pt]
+\hspace{0.3cm}2D Prefix Sum + mat rot\dotfill 18\\
+\hspace{0.3cm}Spiral Matrix \dotfill 18\\
+\hspace{0.3cm}Matrix Exponentiation \dotfill 18\\[4pt]
+
+\textbf{\large 9. Utilities}\\[2pt]
+\hspace{0.3cm}Path Compression \dotfill 18\\
+\hspace{0.3cm}Histogram (Largest Rectangle) \dotfill 18\\
+\hspace{0.3cm}Is Intersect All Points \dotfill 19\\
+\hspace{0.3cm}Unique Line Equations \dotfill 19\\[4pt]
+
+\textbf{\large 10. Special Problems}\\[2pt]
+\hspace{0.3cm}Kth Number (L to R) \dotfill 19\\
+\hspace{0.3cm}Subarrays XOR $<$ k \dotfill 20\\
+\hspace{0.3cm}Min Length with Max XOR \dotfill 20\\
+\hspace{0.3cm}Inversions $i<j<k$ \dotfill 20\\
+\hspace{0.3cm}Tetrahedron Formulas \dotfill 21\\[4pt]
+
+\textbf{\large 11. Templates}\\[2pt]
+\hspace{0.3cm}Template with PBDS \dotfill 21\\
+\hspace{0.3cm}GP Hash Table \dotfill 21\\
+\hspace{0.3cm}Saad Segment Tree \dotfill 21\\
+\hspace{0.3cm}Kaium Segment Tree \dotfill 22\\
+\hspace{0.3cm}Kaium I/O \dotfill 23\\
+\hspace{0.3cm}Kaium Hashing \dotfill 24\\
+\hspace{0.3cm}Min Cut \dotfill 24\\
+\hspace{0.3cm}Convex Hull (kaium) \dotfill 25\\
+
+\end{multicols}
+
+
 \newpage
-\fancyhead[L]{\scriptsize JU\_Jabian\_6.1 }
 
-\begin{normalsize}
-\begin{center}
-\begin{tabular}{p{0.65\textwidth} r}
-
-\multicolumn{2}{l}{\textbf{6. Geometry}} \\
-\ \ \ Basic Geometry & 15 \\
-\ \ \ Convex Hull & 15 \\
-\ \ \ Circle Intersection & 16 \\
-\ \ \ Point in Polygon & 16 \\
-\ \ \ Segment Intersection & 16 \\
-\ \ \ Polygon Area & 17 \\
-\ \ \ Distance from Point to line Segment & 17 \\
-\ \ \ Circle from 3 Points & 17 \\
-\\
-\multicolumn{2}{l}{\textbf{7. Advanced Algorithms}} \\
-\ \ \ Heavy-Light Decomposition & 17 \\
-\ \ \ Mo's Algorithm & 18 \\
-\ \ \ Square Root Decomposition & 18 \\
-\ \ \ Euler Tour & 18 \\
-\ \ \ Tree Diameter & 18 \\
-\\
-\multicolumn{2}{l}{\textbf{8. 2D Algorithms}} \\
-\ \ \ 2D Pre Sum + mat Rotation + grid 8 direction move & 18 \\
-\ \ \ Spiral Matrix & 18 \\
-\ \ \ Matrix Exponentiation & 18 \\
-\\
-\multicolumn{2}{l}{\textbf{9. Utilities}} \\
-\ \ \ Path Compression & 19 \\
-\ \ \ Histogram & 19 \\
-\ \ \ Is Intersect All Points & 19 \\
-\ \ \ Unique Line Equations & 19 \\
-\\
-\multicolumn{2}{l}{\textbf{10. Special Problems}} \\
-\ \ \ Kth Number L to R Using Persistent Seg Tree & 19 \\
-\ \ \ How Many Subarrays XOR $< k$ & 20 \\
-\ \ \ Min Length with Max XOR $\ge k$ & 21 \\
-\ \ \ $I < J < K \ \ and\ \ a_i > a_j > a_k$ & 21 \\
-\ \ \ Tetrahedron Formulas & 21 \\
-\\
-\multicolumn{2}{l}{\textbf{11. Templates}} \\
-\ \ \ Template with PBDS & 21 \\
-\ \ \ GP Hash Table  & 21  \\
-\ \ \ Saad Segment Tree & 22 \\
-\ \ \ Kaium Segment Tree & 23 \\
-\ \ \ Kaium I/O & 23 \\
-\ \ \ Kaium Hashing & 24 \\
-\ \ \ Min Cut & 24 \\
-\ \ \ Convex Hull (kaium) & 25 \\
-\end{tabular}
-\end{center}
-\end{normalsize}
-
+% ========== MAIN CONTENT WITH TWO COLUMNS ==========
+\begin{multicols}{2}
+\fontsize{9}{10}\selectfont  % মেইন কন্টেন্টের ফন্ট
 % ========== PAGE 3: DATA STRUCTURES SECTION + CODE STARTS ==========
 \newpage
 \fancyhead[L]{\scriptsize JU\_Jabian\_6.1}
